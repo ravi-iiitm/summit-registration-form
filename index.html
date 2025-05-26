@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leonardo Baggage Handling System Summit - Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+           <img src="logo.png" alt="Leonardo Company Logo" class="logo">
+            <h1>Leonardo Baggage Handling System Summit</h1>
+            <p>Dallas, TX | Attendee Registration</p>
+        </header>
+        <form id="registrationForm" novalidate>
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
+                <div class="error-message" id="fullNameError"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                <div class="error-message" id="emailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+                <div class="error-message" id="ageError"></div>
+            </div>
+            <div class="form-group">
+                <fieldset>
+                    <legend>Gender:</legend>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                    </div>
+                </fieldset>
+                <div class="error-message" id="genderError"></div>
+            </div>
+            <div class="form-group">
+                <label for="jobRole">Job Role:</label>
+                <select id="jobRole" name="jobRole" required>
+                    <option value="">Please select a role</option>
+                    <option value="engineer">Engineer</option>
+                    <option value="manager">Manager</option>
+                    <option value="director">Director</option>
+                    <option value="student">Student</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="error-message" id="jobRoleError"></div>
+            </div>
+            <div class="form-group">
+                <label for="company">Company:</label>
+                <input list="companies" id="company" name="company">
+                <datalist id="companies">
+                    <option value="American Airlines">
+                    <option value="Delta Air Lines">
+                    <option value="United Airlines">
+                    <option value="Southwest Airlines">
+                    <option value="DFW International Airport">
+                </datalist>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments or Questions:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </div>
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#" target="_blank">Terms and Conditions</a></label>
+            </div>
+            <div class="error-message" id="termsError"></div>
+            <button type="submit">Register</button>
+            
+        </form>
+        <div id="successMessage" class="hidden">
+            <p>Thank you for registering! A confirmation has been sent to your email.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
